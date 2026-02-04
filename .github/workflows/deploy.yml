@@ -23,6 +23,7 @@ jobs:
           aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} \
             --exclude ".git/*" \
             --exclude ".github/*" \
+            --exclude ".gitignore" \
             --exclude "README.md" \
             --exclude "*.md" \
             --delete
